@@ -21,6 +21,8 @@ cuando damos click en empezar nos envia a la parte donde podemos ver las grafica
 ![image](https://github.com/Gabotol/open-weather-map-api/assets/91835413/5eb69188-9092-4fe2-9380-00cbf9ff363b)
 resultado despues de los filtros
 ![image](https://github.com/Gabotol/open-weather-map-api/assets/91835413/6535fe4c-0a84-407d-81b5-ff5221eeaa84)
+![image](https://github.com/Gabotol/open-weather-map-api/assets/91835413/4a2fb794-af93-4fa4-8e12-8ddcc876ae11)
+
 imagenes generales del responsive
 ![image](https://github.com/Gabotol/open-weather-map-api/assets/91835413/f559a23a-5ff0-463f-8bdb-7427b6dcb828)
 ![image](https://github.com/Gabotol/open-weather-map-api/assets/91835413/b23c3371-e0b8-4ded-a5e0-0a3345e6cebd)
