@@ -25,10 +25,9 @@ export const getMarketData = async ({
   const formattedDate = selectedDateTo.toISOString().split('T')[0];
   selectedDateTo.setDate(selectedDateTo.getDate() + 1);
 
-  const response = await axios.get<MarketDataResponse>(`https://' + ${username} + ':' + ${password} + '@api.meteomatics.com/${selectedDateFrom}T00:00:00Z--${formattedDate}T00:00:00Z/${selectedGraphs.join(',')}/${filterStateBase.join('+')}/json?model=mix`, {
-    headers: {
-       Authorization: `Basic ${btoa(username + ":" + password)}`
-    }
+  const response = await axios.post<MarketDataResponse>(`https://vercel-api-weather.vercel.app/api/meteorics/graphs`, {
+      token: `Basic ${btoa(username + ":" + password)}`,
+      url: `https://api.meteomatics.com/${selectedDateFrom}T00:00:00Z--${formattedDate}T00:00:00Z/${selectedGraphs.join(',')}/${filterStateBase.join('+')}/json?model=mix`
   });
 
   return response.data;
