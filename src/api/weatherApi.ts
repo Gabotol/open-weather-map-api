@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { API_BASE_URL } from '../constants/apiUrl';
+import { API_BASE_URL, password, username } from '../constants/apiUrl';
 import getOauthToken from './oauth';
 
 interface GetMarketDataParams {
@@ -19,17 +19,26 @@ export const getMarketData = async ({
   selectedGraphs,
   selectedDateFrom
 }: GetMarketDataParams): Promise<MarketDataResponse> => {
-  const token = await getOauthToken();
+  // const token = await getOauthToken();
   const selectedDateTo = new Date(selectedDateFrom);
   selectedDateTo.setDate(selectedDateTo.getDate() + 1);
   const formattedDate = selectedDateTo.toISOString().split('T')[0];
   selectedDateTo.setDate(selectedDateTo.getDate() + 1);
 
-  const response = await axios.get<MarketDataResponse>(`${API_BASE_URL}/${selectedDateFrom}T00:00:00Z--${formattedDate}T00:00:00Z/${selectedGraphs.join(',')}/${filterStateBase.join('+')}/json?model=mix`, {
-    headers: {
-      'Authorization': `Bearer ${token}`
-    }
-  });
+const headers = new Headers();
+headers.append('Authorization', 'Basic ' + btoa(username + ':' + password));
 
-  return response.data;
+const response = await fetch(`${API_BASE_URL}/${selectedDateFrom}T00:00:00Z--${formattedDate}T00:00:00Z/${selectedGraphs.join(',')}/${filterStateBase.join('+')}/json?model=mix`, {
+  headers: headers
+});
+console.log({response})
+
+if (!response.ok) {
+  throw new Error('Network response was not ok ' + response.statusText);
+}
+
+const data: MarketDataResponse = await response.json();
+console.log({data: data.data})
+
+  return data;
 };

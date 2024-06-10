@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/open-weather-map-api/build/static/css/main.64dcd6ec.css",
-    "main.js": "/open-weather-map-api/build/static/js/main.23722b7b.js",
+    "main.js": "/open-weather-map-api/build/static/js/main.c005a65c.js",
     "static/media/bg-night.jpg": "/open-weather-map-api/build/static/media/bg-night.e05f0b6a566c0e862046.jpg",
     "static/media/bg-day.jpg": "/open-weather-map-api/build/static/media/bg-day.73f1ddf4867083b3c4a6.jpg",
     "static/media/no-data.png": "/open-weather-map-api/build/static/media/no-data.23ffc88baad09f0f7e4d.png",
@@ -10,10 +10,10 @@
     "static/media/close.svg": "/open-weather-map-api/build/static/media/close.62d542d8225e9ae56794bdce0b546338.svg",
     "static/media/night-mode.svg": "/open-weather-map-api/build/static/media/night-mode.893ded76bc9742623319cf1e67f72583.svg",
     "main.64dcd6ec.css.map": "/open-weather-map-api/build/static/css/main.64dcd6ec.css.map",
-    "main.23722b7b.js.map": "/open-weather-map-api/build/static/js/main.23722b7b.js.map"
+    "main.c005a65c.js.map": "/open-weather-map-api/build/static/js/main.c005a65c.js.map"
   },
   "entrypoints": [
     "static/css/main.64dcd6ec.css",
-    "static/js/main.23722b7b.js"
+    "static/js/main.c005a65c.js"
   ]
 }
