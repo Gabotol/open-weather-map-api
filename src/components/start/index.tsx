@@ -5,14 +5,14 @@ import {
   SubContainer,
 } from "../../styled-components/start/Start.styled";
 import React from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 interface StartProps {
   darkMode: boolean;
 }
 
-const Start: React.FC<StartProps> = ({ darkMode }) => {
-  const navigate = useNavigate();
+const Start: React.FC<StartProps> = ({ darkMode, setStart }) => {
+  // const navigate = useNavigate();
 
   return (
     <StartOverlay darkMode={darkMode}>
@@ -24,7 +24,7 @@ const Start: React.FC<StartProps> = ({ darkMode }) => {
         <StartText darkMode={darkMode}>
           Completa todos los filtros para comenzar a ver las gráficas
         </StartText>
-        <StartButton darkMode={darkMode} onClick={() => navigate("/home")}>
+        <StartButton darkMode={darkMode} onClick={() => setStart(false)}>
           Empezemos
         </StartButton>
       </SubContainer>

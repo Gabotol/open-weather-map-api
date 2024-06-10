@@ -1,9 +1,9 @@
 import './App.css';
-import RootRoutes from './components/Routes';
+import HomePage from './pages/Home';
 
 function App() {
   return (
-    <RootRoutes />
+    <HomePage />
   );
 }
 
